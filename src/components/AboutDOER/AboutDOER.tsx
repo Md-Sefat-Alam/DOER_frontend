@@ -6,7 +6,7 @@ type Props = {};
 
 export default function AboutDOER({}: Props) {
   return (
-    <div className="py-10 container mx-auto">
+    <div id="services" className="py-10 container mx-auto">
       <Title title="অগ্রণী দুয়ার ব্যাংকিং কি?" />
       <blockquote
         className="text-lg text-justify py-4"

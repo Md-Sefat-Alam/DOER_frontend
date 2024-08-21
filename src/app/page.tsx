@@ -10,7 +10,7 @@ const Hero = dynamic(() => import("@/components/Hero/Hero"), { ssr: false });
 export default function Home() {
   return (
     <main className="">
-      <div className="min-h-screen">
+      <div id='home' className="min-h-screen">
         <Hero />
       </div>
       <AboutDOER />

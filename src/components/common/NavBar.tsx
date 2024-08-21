@@ -12,7 +12,7 @@ const links: INavLink[] = [
   { id: 3, title: "গ্যালারী", href: "#gallery" },
   { id: 4, title: "বিশেষ কর্মসূচী", href: "#special_works" },
   { id: 5, title: "যোগাযোগ", href: "#contact" },
-  { id: 5, title: "লগইন", href: "#login" },
+  { id: 5, title: "লগইন", href: "login" },
 ];
 
 export default function NavBar({}: Props) {

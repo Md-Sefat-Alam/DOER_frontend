@@ -7,7 +7,7 @@ type Props = {};
 
 export default function SpecialWorks({}: Props) {
   return (
-    <div className="bg-gray-100/65">
+    <div id='special_works' className="bg-gray-100/65">
       <div className="container mx-auto py-8">
         <Title title="বিশেষ কর্মসূচী" />
         <div className="grid grid-cols-3 gap-10">

@@ -18,7 +18,7 @@ const images = [
 
 export default function Gallery({}: Props) {
   return (
-    <div className="">
+    <div id='gallery' className="">
       <div className="container mx-auto py-10">
         <Title title="অগ্রণী দুয়ার গ্যালারী" />
         <div className="flex gap-4 py-3 justify-center">

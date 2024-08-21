@@ -7,7 +7,7 @@ type Props = {};
 
 export default function Contact({}: Props) {
   return (
-    <div>
+    <div id="contact">
       <div className="container mx-auto py-8">
         <Title title="যোগাযোগের ঠিকানা" />
         <div className="py-8 flex justify-between">

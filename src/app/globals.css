@@ -6,6 +6,11 @@ body {
   font-family: "Nunito Sans", sans-serif !important;
 }
 
+* {
+  scroll-behavior: smooth;
+  scroll-margin-top: 80px;
+}
+
 .swiper {
   width: 100%;
   height: 100%;
