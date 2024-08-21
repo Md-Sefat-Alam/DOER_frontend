@@ -1,8 +1,8 @@
+"use client";
 import { INavLink } from "@/types/hero";
 import Image from "next/image";
-import React from "react";
 import NavLinks from "./NavLinks";
-import Link from "next/link";
+import { useEffect, useState } from "react";
 
 type Props = {};
 
@@ -16,27 +16,53 @@ const links: INavLink[] = [
 ];
 
 export default function NavBar({}: Props) {
+  const [isSticky, setIsSticky] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 0) {
+        setIsSticky(true);
+      } else {
+        setIsSticky(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
   return (
-    <div className="absolute top-0 w-full py-2 z-10 ">
-      <div className="container mx-auto">
+    <div
+      className={
+        (isSticky ? "shadow-lg bg-white" : "") + ` fixed top-0 w-full py-2 z-10 transition-all`
+      }
+    >
+      <div className="container mx-auto py-1">
         <div className="flex justify-between">
           <div>
             <Image
               alt="log"
-              src={"/assets/logo/DOER_Logo_light.png"}
-              width={150}
-              height={150}
+              src={"/assets/logo/DOER_Logo.png"}
+              width={120}
+              height={120}
             />
           </div>
           <div className="flex justify-center items-center">
             <ul className="flex gap-4">
               {links.map((item) => (
-                <NavLinks item={item} />
+                <NavLinks item={item} isSticky={isSticky} />
               ))}
             </ul>
           </div>
           <div className="flex justify-center items-center">
-            <button>English</button>
+            <button
+              className={`${
+                isSticky ? "text-gray-900" : "text-white"
+              } font-bold`}
+            >
+              English
+            </button>
           </div>
         </div>
       </div>

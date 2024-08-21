@@ -6,7 +6,7 @@ type Props = {};
 
 export default function OurServices({}: Props) {
   return (
-    <div className="bg-gray-200/65">
+    <div className="bg-gray-100/65">
       <div className="py-16 container mx-auto ">
         <Title title="আমাদের সেবাসমূহ" />
         <div className="grid grid-cols-2 gap-8 w-full xl:w-[70%] mx-auto my-4">

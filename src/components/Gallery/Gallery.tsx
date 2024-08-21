@@ -21,8 +21,19 @@ export default function Gallery({}: Props) {
     <div className="">
       <div className="container mx-auto py-10">
         <Title title="অগ্রণী দুয়ার গ্যালারী" />
+        <div className="flex gap-4 py-3 justify-center">
+          <button className="border rounded-md bg-gray-400/50 p-2 hover:bg-gray-400/50">
+            সকল ছবি
+          </button>
+          <button className="border rounded-md p-2 hover:bg-gray-400/50">
+            প্রশিক্ষণ
+          </button>
+          <button className="border rounded-md p-2 hover:bg-gray-400/50">
+            এজেন্ট শাখায় লেনদেন
+          </button>
+        </div>
         <div className="py-5">
-          <div className="container mx-auto">
+          <div className="">
             <MasonryLayout images={images} />
           </div>
         </div>
