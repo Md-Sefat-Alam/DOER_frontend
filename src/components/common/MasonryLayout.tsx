@@ -1,11 +1,21 @@
-import React from 'react';
+import { IGalleryData } from "@/types/gallery";
+import React, { Dispatch, SetStateAction } from "react";
+import GalleryGetImage from "../Gallery/GalleryGetImage";
 
-const MasonryLayout = ({ images }: { images: Array<string> }) => {
+const MasonryLayout = ({
+  imageData,
+  isDashboard,
+  setImageData
+}: {
+  imageData: IGalleryData[];
+  setImageData: Dispatch<SetStateAction<IGalleryData[]>>;
+  isDashboard?: boolean;
+}) => {
   return (
     <div className="masonry-grid">
-      {images.map((src, index) => (
-        <div key={index} className="masonry-item overflow-hidden">
-          <img src={src} alt={`Masonry Image ${index + 1}`} />
+      {imageData.map((item) => (
+        <div key={item._id} className="masonry-item overflow-hidden">
+          <GalleryGetImage item={item} isDashboard={isDashboard} setImageData={setImageData} />
         </div>
       ))}
     </div>

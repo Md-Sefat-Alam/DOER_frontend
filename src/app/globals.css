@@ -37,16 +37,18 @@ body {
 /* ///////////////////////// */
 .masonry-grid {
   column-count: 3; /* Adjust the number of columns */
-  column-gap: 0px; /* Gap between columns */
+  column-gap: 10px; /* Gap between columns */
 }
 
 .masonry-item {
   break-inside: avoid;
-  margin-bottom: 0px; /* Space between items vertically */
-  background: #fff; /* Optional: Background color to fill gaps */
+  margin-bottom: 10px; /* Space between items vertically */
+  /* background: #fff; Optional: Background color to fill gaps */
   display: inline-block;
   width: 100%;
   box-sizing: border-box;
+  border-radius: 20px;
+  overflow: hidden;
 }
 
 .masonry-item img {
