@@ -27,7 +27,7 @@ export default memo(function GalleryGetImage({
     const fetchImage = async () => {
       try {
         const response = await fetch(
-          `http://localhost:5000/gallery/image/${item._id}`
+          `https://agrani-doer-backend-ro9fiezz5-mdsefatalams-projects.vercel.app/gallery/image/${item._id}`
         );
         const data = await response.json();
         setImage(data.image);
@@ -77,7 +77,7 @@ export default memo(function GalleryGetImage({
                   try {
                     setIsLoading(true);
                     const deleteResponse = await fetch(
-                      `http://localhost:5000/gallery/${item._id}`,
+                      `https://agrani-doer-backend-ro9fiezz5-mdsefatalams-projects.vercel.app/gallery/${item._id}`,
                       {
                         method: "DELETE",
                       }

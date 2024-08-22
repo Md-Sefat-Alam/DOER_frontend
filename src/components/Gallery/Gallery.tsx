@@ -12,7 +12,7 @@ export default function Gallery({}: Props) {
 
   useEffect(() => {
     setIsLoading(true);
-    fetch("http://localhost:5000/gallery")
+    fetch("https://agrani-doer-backend-ro9fiezz5-mdsefatalams-projects.vercel.app/gallery")
       .then((res) => res.json())
       .then((data) => setGalleryData(data))
       .finally(() => {

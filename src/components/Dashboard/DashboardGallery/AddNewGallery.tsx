@@ -1,14 +1,12 @@
 "use client";
-import GalleryGetImage from "@/components/Gallery/GalleryGetImage";
 import { useGalleryEditContext } from "@/context/Gallery/GalleryEditContext";
 import { IGalleryData } from "@/types/gallery";
 import React, {
   Dispatch,
   SetStateAction,
-  useCallback,
   useEffect,
   useRef,
-  useState,
+  useState
 } from "react";
 import { FaUpload } from "react-icons/fa";
 import { FaSpinner } from "react-icons/fa6";
@@ -78,7 +76,7 @@ export default function AddNewGallery({ setGalleryData, imageData }: Props) {
     galleryFormData.append("postDate", new Date().toLocaleDateString());
     galleryFormData.append("postTime", new Date().toLocaleTimeString());
 
-    fetch("http://localhost:5000/gallery", {
+    fetch("https://agrani-doer-backend-ro9fiezz5-mdsefatalams-projects.vercel.app/gallery", {
       method: "POST",
       body: galleryFormData,
     })
@@ -89,7 +87,7 @@ export default function AddNewGallery({ setGalleryData, imageData }: Props) {
             type: "success",
           });
 
-          await fetch("http://localhost:5000/gallery")
+          await fetch("https://agrani-doer-backend-ro9fiezz5-mdsefatalams-projects.vercel.app/gallery")
             .then((res) => res.json())
             .then((data) => setGalleryData(data))
             .finally(() => {
@@ -141,7 +139,7 @@ export default function AddNewGallery({ setGalleryData, imageData }: Props) {
     galleryFormData.append("postDate", new Date().toLocaleDateString());
     galleryFormData.append("postTime", new Date().toLocaleTimeString());
 
-    fetch("http://localhost:5000/gallery/" + _id, {
+    fetch("https://agrani-doer-backend-ro9fiezz5-mdsefatalams-projects.vercel.app/gallery/" + _id, {
       method: "PUT",
       body: galleryFormData,
     })
@@ -155,7 +153,7 @@ export default function AddNewGallery({ setGalleryData, imageData }: Props) {
           });
           setGetUpdate(_id);
 
-          await fetch("http://localhost:5000/gallery")
+          await fetch("https://agrani-doer-backend-ro9fiezz5-mdsefatalams-projects.vercel.app/gallery")
             .then((res) => res.json())
             .then((data) => setGalleryData(data))
             .finally(() => {

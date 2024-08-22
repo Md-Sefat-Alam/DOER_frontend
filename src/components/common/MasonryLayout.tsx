@@ -1,5 +1,5 @@
 import { IGalleryData } from "@/types/gallery";
-import React, { Dispatch, SetStateAction } from "react";
+import { Dispatch, SetStateAction } from "react";
 import GalleryGetImage from "../Gallery/GalleryGetImage";
 
 const MasonryLayout = ({
@@ -12,7 +12,7 @@ const MasonryLayout = ({
   isDashboard?: boolean;
 }) => {
   return (
-    <div className="masonry-grid">
+    <div className="masonry-grid py-4 min-h-[500px]">
       {imageData.map((item) => (
         <div key={item._id} className="masonry-item overflow-hidden">
           <GalleryGetImage item={item} isDashboard={isDashboard} setImageData={setImageData} />
