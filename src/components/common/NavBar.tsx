@@ -67,7 +67,7 @@ export default function NavBar({}: Props) {
             <button
               className={`${
                 isSticky ? "text-gray-900" : "text-white"
-              } font-bold flex gap-2`}
+              } font-bold flex gap-1`}
             >
               <BiWorld className="text-2xl text-blue-400" />
               English

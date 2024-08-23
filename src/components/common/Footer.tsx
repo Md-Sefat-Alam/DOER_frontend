@@ -8,8 +8,8 @@ type Props = {};
 export default function Footer({}: Props) {
   return (
     <div className="bg-gray-600">
-      <div className="container mx-auto py-10 flex px-2 xl:px-0">
-        <div className="w-[30%]">
+      <div className="container mx-auto py-10 flex md:flex-row flex-col px-2 xl:px-0">
+        <div className="md:w-[30%] w-full flex flex-col justify-center sm:items-start items-center">
           <div className="pb-10">
             <h1 className="text-3xl font-bold text-white pb-2">অগ্রণী দুয়ার</h1>
             <blockquote className="text-gray-400">
@@ -23,7 +23,7 @@ export default function Footer({}: Props) {
             />
           </div>
         </div>
-        <div className="w-[70%] flex justify-between">
+        <div className="md:w-[70%] w-full md:mt-0 mt-10 lg flex sm:flex-row flex-col sm:justify-between justify-center sm:items-start items-center">
           <div>
             <Title title="অগ্রনী দুয়ার সম্পর্কে" color="text-white" />
             <ul className="pt-5">
