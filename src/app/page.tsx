@@ -1,4 +1,5 @@
 import AboutDOER from "@/components/AboutDOER/AboutDOER";
+import AccountTypes from "@/components/AccountTypes/AccountTypes";
 import Contact from "@/components/Contact/Contact";
 import Gallery from "@/components/Gallery/Gallery";
 import OurServices from "@/components/OurServices/OurServices";
@@ -15,6 +16,7 @@ export default function Home() {
       </div>
       <AboutDOER />
       <OurServices />
+      <AccountTypes />
       <Gallery />
       <SpecialWorks />
       <Contact />

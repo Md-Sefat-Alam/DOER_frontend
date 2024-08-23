@@ -5,7 +5,7 @@ type Props = { item: ISliderData };
 export default function SliderBody({ item }: Props) {
   return (
     <div
-      className={`h-screen bg-no-repeat bg-cover`}
+      className={`h-screen bg-no-repeat bg-cover bg-center`}
       style={{ backgroundImage: `url('${item.ImgUrl}')` }}
     >
       {item.title ? (

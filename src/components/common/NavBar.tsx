@@ -7,6 +7,7 @@ import { CgClose } from "react-icons/cg";
 import NavLinks from "./NavLinks";
 import NavLinksMobile from "./NavLinksMobile";
 import { MdMenu } from "react-icons/md";
+import Link from "next/link";
 
 type Props = {};
 
@@ -49,12 +50,14 @@ export default function NavBar({}: Props) {
       <div className="container mx-auto py-1 xl:px-0 px-2 hidden md:block">
         <div className="flex justify-between">
           <div>
-            <Image
-              alt="log"
-              src={"/assets/logo/DOER_Logo.png"}
-              width={110}
-              height={110}
-            />
+            <Link href={"/"}>
+              <Image
+                alt="log"
+                src={"/assets/logo/DOER_Logo.png"}
+                width={110}
+                height={110}
+              />
+            </Link>
           </div>
           <div className="flex justify-center items-center">
             <ul className="flex gap-4">
@@ -84,12 +87,14 @@ export default function NavBar({}: Props) {
       >
         <div className="relative">
           <div className="z-20 py-1">
-            <Image
-              alt="log"
-              src={"/assets/logo/DOER_Logo.png"}
-              width={110}
-              height={110}
-            />
+            <Link href={"/"}>
+              <Image
+                alt="log"
+                src={"/assets/logo/DOER_Logo.png"}
+                width={110}
+                height={110}
+              />
+            </Link>
           </div>
 
           <div
