@@ -7,7 +7,7 @@ type Props = {};
 export default function page({}: Props) {
   return (
     <div className=" min-h-screen bg-gray-300 pt-[120px]">
-      <div className="container mx-auto">
+      <div className="container mx-auto xl:px-0 px-4">
         <Title title="অগ্রণী দুয়ার গ্যালারী পরিবর্তন করুন" />
         <DashboardGallery />
       </div>

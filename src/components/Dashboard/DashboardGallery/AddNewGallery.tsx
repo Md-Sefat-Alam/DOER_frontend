@@ -6,7 +6,7 @@ import React, {
   SetStateAction,
   useEffect,
   useRef,
-  useState
+  useState,
 } from "react";
 import { FaUpload } from "react-icons/fa";
 import { FaSpinner } from "react-icons/fa6";
@@ -76,10 +76,13 @@ export default function AddNewGallery({ setGalleryData, imageData }: Props) {
     galleryFormData.append("postDate", new Date().toLocaleDateString());
     galleryFormData.append("postTime", new Date().toLocaleTimeString());
 
-    fetch("https://agrani-doer-backend-ro9fiezz5-mdsefatalams-projects.vercel.app/gallery", {
-      method: "POST",
-      body: galleryFormData,
-    })
+    fetch(
+      "https://agrani-doer-backend-ro9fiezz5-mdsefatalams-projects.vercel.app/gallery",
+      {
+        method: "POST",
+        body: galleryFormData,
+      }
+    )
       .then((response) => response.json())
       .then(async (result) => {
         if (result.insertedId) {
@@ -87,7 +90,9 @@ export default function AddNewGallery({ setGalleryData, imageData }: Props) {
             type: "success",
           });
 
-          await fetch("https://agrani-doer-backend-ro9fiezz5-mdsefatalams-projects.vercel.app/gallery")
+          await fetch(
+            "https://agrani-doer-backend-ro9fiezz5-mdsefatalams-projects.vercel.app/gallery"
+          )
             .then((res) => res.json())
             .then((data) => setGalleryData(data))
             .finally(() => {
@@ -139,10 +144,14 @@ export default function AddNewGallery({ setGalleryData, imageData }: Props) {
     galleryFormData.append("postDate", new Date().toLocaleDateString());
     galleryFormData.append("postTime", new Date().toLocaleTimeString());
 
-    fetch("https://agrani-doer-backend-ro9fiezz5-mdsefatalams-projects.vercel.app/gallery/" + _id, {
-      method: "PUT",
-      body: galleryFormData,
-    })
+    fetch(
+      "https://agrani-doer-backend-ro9fiezz5-mdsefatalams-projects.vercel.app/gallery/" +
+        _id,
+      {
+        method: "PUT",
+        body: galleryFormData,
+      }
+    )
       .then((response) => response.json())
       .then(async (result) => {
         console.log({ result });
@@ -153,7 +162,9 @@ export default function AddNewGallery({ setGalleryData, imageData }: Props) {
           });
           setGetUpdate(_id);
 
-          await fetch("https://agrani-doer-backend-ro9fiezz5-mdsefatalams-projects.vercel.app/gallery")
+          await fetch(
+            "https://agrani-doer-backend-ro9fiezz5-mdsefatalams-projects.vercel.app/gallery"
+          )
             .then((res) => res.json())
             .then((data) => setGalleryData(data))
             .finally(() => {
@@ -192,7 +203,7 @@ export default function AddNewGallery({ setGalleryData, imageData }: Props) {
         <form
           onSubmit={isEdit ? handleUpdate : handleAddNew}
           method="post"
-          className="w-1/2 py-10"
+          className="sm:w-1/2 w-full py-10 sm:px-0 px-4"
         >
           {isEdit ? (
             <div className="flex">

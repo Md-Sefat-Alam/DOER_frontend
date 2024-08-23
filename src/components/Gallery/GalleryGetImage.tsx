@@ -56,7 +56,7 @@ export default memo(function GalleryGetImage({
         />
       )}
 
-      <div className="cursor-pointer bg-gray-600/50 opacity-0 hover:opacity-100  absolute bottom-0 left-0 w-full h-full flex flex-col p-3 items-center justify-center transition-all">
+      <div className="cursor-pointer bg-gray-600/50 opacity-0 hover:opacity-100 absolute bottom-0 left-0 w-full h-full flex flex-col p-3 items-center justify-center transition-all">
         <h2 className="text-2xl font-bold text-white">{item?.title}</h2>
         <h2 className="py-3 text-white">
           {item?.description.slice(0, 50) + "..."}
