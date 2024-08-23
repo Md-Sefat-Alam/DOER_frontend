@@ -8,9 +8,9 @@ type Props = {};
 export default function SpecialWorks({}: Props) {
   return (
     <div id='special_works' className="bg-gray-100/65">
-      <div className="container mx-auto py-8">
+      <div className="container mx-auto py-16 xl:px-0 px-4">
         <Title title="বিশেষ কর্মসূচী" />
-        <div className="grid grid-cols-3 gap-10">
+        <div className="grid lg:grid-cols-3 py-4 sm:grid-cols-2 grid-cols-1 lg:gap-10 gap-4">
           {specialWorks.map((item) => (
             <Card item={item} />
           ))}

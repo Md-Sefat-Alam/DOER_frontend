@@ -4,9 +4,9 @@ type Props = {};
 
 export default function ContactForm({}: Props) {
   return (
-    <div className="w-[60%]">
+    <div className="md:w-[60%] w-full md:mt-0 mt-10">
       <form action="" method="post" className="flex flex-col gap-3">
-        <div className="flex gap-4">
+        <div className="flex gap-4 sm:flex-row flex-col">
           <input className="w-full rounded border p-2 focus:outline-red-400" type="text" placeholder="আপনার নাম..." />
           <input className="w-full rounded border p-2 focus:outline-red-400" type="text" placeholder="আপনার ইমেইল..." />
         </div>

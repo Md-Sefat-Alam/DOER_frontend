@@ -23,8 +23,10 @@ export default function Footer({}: Props) {
             />
           </div>
         </div>
-        <div className="md:w-[70%] w-full md:mt-0 mt-10 lg flex sm:flex-row flex-col sm:justify-between justify-center sm:items-start items-center">
-          <div>
+        <div className="md:w-[70%] w-full md:mt-0 mt-10 lg flex sm:flex-row flex-col sm:justify-between sm:items-start items-center">
+          <div
+          // className="sm:self-auto self-end"
+          >
             <Title title="অগ্রনী দুয়ার সম্পর্কে" color="text-white" />
             <ul className="pt-5">
               <Link href={"/#"}>
@@ -39,7 +41,7 @@ export default function Footer({}: Props) {
               </Link>
             </ul>
           </div>
-          <div>
+          <div className="">
             <Title title="গুরুত্বপূর্ণ লিংকসমূহ" color="text-white" />
             <ul className="pt-5">
               <Link href={"/#"}>

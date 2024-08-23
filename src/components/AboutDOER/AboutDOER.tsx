@@ -6,7 +6,7 @@ type Props = {};
 
 export default function AboutDOER({}: Props) {
   return (
-    <div id="services" className="py-10 container mx-auto">
+    <div id="services" className="py-16 container mx-auto xl:px-0 px-4">
       <Title title="অগ্রণী দুয়ার ব্যাংকিং কি?" />
       <blockquote
         className="text-lg text-justify py-4"
@@ -25,7 +25,7 @@ export default function AboutDOER({}: Props) {
         </Link>
       </blockquote>
       <div className="flex justify-end">
-        <button className="block bg-blue-950 text-white p-5 font-bold rounded-md text-5xl">
+        <button className="block bg-blue-950 text-white p-5 font-bold rounded-md lg:text-5xl md:text-3xl text-xl">
           এজেন্ট শাখা এর জন্য আবেদন করুন
         </button>
       </div>

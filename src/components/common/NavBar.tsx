@@ -41,7 +41,7 @@ export default function NavBar({}: Props) {
   return (
     <div
       className={
-        (isSticky && !isNavMobile ? "shadow-lg bg-white" : "") +
+        (isSticky && !isNavMobile ? "shadow-lg bg-white/85" : "") +
         ` fixed top-0 w-full z-10 transition-all`
       }
     >
@@ -129,7 +129,7 @@ export default function NavBar({}: Props) {
           ) : (
             <MdMenu
               onClick={() => setIsNavMobile((prev) => !prev)}
-              className="absolute transition-all top-3 right-5 bg-blue-400 p-1 rounded-full text-4xl font-bold text-white"
+              className="absolute transition-all top-3 right-5 bg-black/30 p-1 rounded-full text-4xl font-bold text-white"
             />
           )}
         </div>

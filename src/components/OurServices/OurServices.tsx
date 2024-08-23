@@ -7,9 +7,9 @@ type Props = {};
 export default function OurServices({}: Props) {
   return (
     <div className="bg-gray-100/65">
-      <div className="py-16 container mx-auto ">
+      <div className="py-16 container mx-auto xl:px-0 px-4">
         <Title title="আমাদের সেবাসমূহ" />
-        <div className="grid grid-cols-2 gap-8 w-full xl:w-[70%] mx-auto my-4">
+        <div className="grid sm:grid-cols-2 grid-cols-1 sm:gap-8 gap-6s w-full xl:w-[70%] mx-auto my-4">
           {services.map((item) => (
             <Service item={item} />
           ))}

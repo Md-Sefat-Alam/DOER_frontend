@@ -5,7 +5,7 @@ import GalleryGetImage from "../Gallery/GalleryGetImage";
 const MasonryLayout = ({
   imageData,
   isDashboard,
-  setImageData
+  setImageData,
 }: {
   imageData: IGalleryData[];
   setImageData: Dispatch<SetStateAction<IGalleryData[]>>;
@@ -15,7 +15,11 @@ const MasonryLayout = ({
     <div className="masonry-grid py-4 min-h-[500px]">
       {imageData.map((item) => (
         <div key={item._id} className="masonry-item overflow-hidden">
-          <GalleryGetImage item={item} isDashboard={isDashboard} setImageData={setImageData} />
+          <GalleryGetImage
+            item={item}
+            isDashboard={isDashboard}
+            setImageData={setImageData}
+          />
         </div>
       ))}
     </div>

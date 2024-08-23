@@ -6,7 +6,7 @@ type Props = {};
 
 export default function ContactAddress({}: Props) {
   return (
-    <div className="w-[40%]">
+    <div className="md:w-[40%] w-full">
       <div>
         <SingleItem
           icon={<MailIcon className="w-[30px] stroke-gray-500" />}

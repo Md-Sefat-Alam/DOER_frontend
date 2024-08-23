@@ -5,7 +5,7 @@ type Props = { item: ISpecialWorks };
 
 export default function Card({ item }: Props) {
   return (
-    <div className="py-8">
+    <div className="py-2">
       <img className="rounded-t-2xl" src={item.imgUrl} />
       <div className="py-5">
         <h4 className="pb-4 text-xl font-bold">{item.title}</h4>
