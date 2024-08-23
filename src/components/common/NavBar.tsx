@@ -1,8 +1,12 @@
 "use client";
 import { INavLink } from "@/types/hero";
 import Image from "next/image";
-import NavLinks from "./NavLinks";
 import { useEffect, useState } from "react";
+import { BiWorld } from "react-icons/bi";
+import { CgClose } from "react-icons/cg";
+import NavLinks from "./NavLinks";
+import NavLinksMobile from "./NavLinksMobile";
+import { MdMenu } from "react-icons/md";
 
 type Props = {};
 
@@ -17,6 +21,7 @@ const links: INavLink[] = [
 
 export default function NavBar({}: Props) {
   const [isSticky, setIsSticky] = useState(false);
+  const [isNavMobile, setIsNavMobile] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -32,20 +37,23 @@ export default function NavBar({}: Props) {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
   return (
     <div
       className={
-        (isSticky ? "shadow-lg bg-white" : "") + ` fixed top-0 w-full py-2 z-10 transition-all`
+        (isSticky && !isNavMobile ? "shadow-lg bg-white" : "") +
+        ` fixed top-0 w-full z-10 transition-all`
       }
     >
-      <div className="container mx-auto py-1">
+      {/* This is for Large Device */}
+      <div className="container mx-auto py-1 xl:px-0 px-2 hidden md:block">
         <div className="flex justify-between">
           <div>
             <Image
               alt="log"
               src={"/assets/logo/DOER_Logo.png"}
-              width={120}
-              height={120}
+              width={110}
+              height={110}
             />
           </div>
           <div className="flex justify-center items-center">
@@ -59,11 +67,71 @@ export default function NavBar({}: Props) {
             <button
               className={`${
                 isSticky ? "text-gray-900" : "text-white"
-              } font-bold`}
+              } font-bold flex gap-2`}
             >
+              <BiWorld className="text-2xl text-blue-400" />
               English
             </button>
           </div>
+        </div>
+      </div>
+
+      {/* This is for Mobile Device */}
+      <div
+        className={`block md:hidden ${
+          isNavMobile ? "h-screen overflow-hidden" : ""
+        }`}
+      >
+        <div className="relative">
+          <div className="z-20 py-1">
+            <Image
+              alt="log"
+              src={"/assets/logo/DOER_Logo.png"}
+              width={110}
+              height={110}
+            />
+          </div>
+
+          <div
+            style={{
+              height: isNavMobile ? "100vh" : "0px",
+            }}
+            className={` absolute transition-[height] top-0 ${
+              isNavMobile ? "bg-black/70" : ""
+            } w-full h-screen overflow-hidden ${
+              isNavMobile ? "pt-20 pb-4" : ""
+            }`}
+          >
+            <div className="">
+              <ul className="flex flex-col gap-2">
+                {links.map((item) => (
+                  <NavLinksMobile
+                    item={item}
+                    isSticky={isSticky}
+                    setIsNavMobile={setIsNavMobile}
+                  />
+                ))}
+              </ul>
+            </div>
+            <div className="flex justify-end items-center mt-4 mr-4">
+              <button
+                className={`text-white font-bold bg-gray-500/50 p-4 rounded flex gap-2`}
+              >
+                <BiWorld className="text-2xl text-blue-400" /> English
+              </button>
+            </div>
+          </div>
+          {isNavMobile ? (
+            <CgClose
+              onClick={() => setIsNavMobile((prev) => !prev)}
+              className="absolute transition-all top-3 right-5 bg-red-400 p-1 rounded-full text-4xl font-bold text-white"
+            />
+          ) : (
+            <MdMenu
+              onClick={() => setIsNavMobile((prev) => !prev)}
+              className="absolute transition-all top-3 right-5 bg-blue-400 p-1 rounded-full text-4xl font-bold text-white"
+            />
+          )}
         </div>
       </div>
     </div>

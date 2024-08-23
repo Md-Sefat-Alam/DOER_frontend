@@ -8,7 +8,7 @@ type Props = {};
 export default function Footer({}: Props) {
   return (
     <div className="bg-gray-600">
-      <div className="container mx-auto py-10 flex">
+      <div className="container mx-auto py-10 flex px-2 xl:px-0">
         <div className="w-[30%]">
           <div className="pb-10">
             <h1 className="text-3xl font-bold text-white pb-2">অগ্রণী দুয়ার</h1>
