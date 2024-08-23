@@ -26,7 +26,7 @@ export default function Footer({}: Props) {
         <div className="md:w-[70%] w-full md:mt-0 mt-10 md:gap-0 gap-10 flex sm:flex-row flex-col sm:justify-between sm:items-start ">
           <div className="sm:self-auto self-end">
             <Title isReverse title="অগ্রনী দুয়ার সম্পর্কে" color="text-white " />
-            <ul className="md:pt-5 pt-2  text-right md:text-left ">
+            <ul className="md:pt-5 pt-2  text-right sm:text-left ">
               <Link href={"/#"}>
                 <li className="text-gray-400 hover:-translate-y-1 transition-all hover:text-white gap-2">
                   আমাদের সম্পর্কে
@@ -66,7 +66,7 @@ export default function Footer({}: Props) {
           </div>
           <div className="sm:self-auto self-end">
             <Title isReverse title="যোগাযোগ করুন" color="text-white" />
-            <ul className="text-right md:text-left md:pt-5 pt-2">
+            <ul className="text-right sm:text-left md:pt-5 pt-2">
               <Link href={"/#"}>
                 <li className="text-gray-400 hover:-translate-y-1 transition-all hover:text-white">
                   অগ্রণীদুয়ার সম্পর্কিত তথ্য জানতে ...
