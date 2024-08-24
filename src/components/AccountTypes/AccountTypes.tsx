@@ -1,9 +1,12 @@
 import { Link } from "@/navigation";
+import { useTranslations } from "next-intl";
 import React from "react";
 
 type Props = {};
 
 export default function AccountTypes({}: Props) {
+  const t = useTranslations("home_account_type");
+  const common = useTranslations("common");
   return (
     <div className="bg-[#155886]/10">
       <div className="container mx-auto py-10">
@@ -13,7 +16,7 @@ export default function AccountTypes({}: Props) {
               <div className="relative w-[170px] h-[170px] rounded-xl bg-blue-400 rotate-45 shadow-inner">
                 <div className="absolute inset-0 flex items-center justify-center rotate-[-45deg]">
                   <p className="text-center w-2/3 text-3xl font-bold text-white">
-                    সেভিংস একাউন্ট
+                    {t("sevings_account")}
                   </p>
                 </div>
               </div>
@@ -21,14 +24,14 @@ export default function AccountTypes({}: Props) {
                 <div className="relative w-[170px] h-[170px] rounded-xl bg-gray-400 rotate-45">
                   <div className="absolute inset-0 flex items-center justify-center rotate-[-45deg]">
                     <p className="text-center w-2/3 text-3xl font-bold text-white">
-                      বিজনেস একাউন্ট
+                      {t("business_account")}
                     </p>
                   </div>
                 </div>
                 <div className="relative w-[170px] h-[170px] rounded-xl bg-gray-400 rotate-45">
                   <div className="absolute inset-0 flex items-center justify-center rotate-[-45deg]">
                     <p className="text-center w-2/3 text-3xl font-bold text-white">
-                      RDF
+                      {t("rfd")}
                     </p>
                   </div>
                 </div>
@@ -37,21 +40,21 @@ export default function AccountTypes({}: Props) {
                 <div className="relative w-[170px] h-[170px] rounded-xl bg-[#155886] rotate-45">
                   <div className="absolute inset-0 flex items-center justify-center rotate-[-45deg]">
                     <p className="text-center w-2/3 text-3xl font-bold text-white">
-                      সুপার সেভিংস{" "}
+                      {t("supper_saving")}
                     </p>
                   </div>
                 </div>
                 <div className="relative w-[170px] h-[170px] rounded-xl bg-[#155886] rotate-45">
                   <div className="absolute inset-0 flex items-center justify-center rotate-[-45deg]">
                     <p className="text-center w-2/3 text-3xl font-bold text-white">
-                      ABS
+                      {t("abs")}
                     </p>
                   </div>
                 </div>
                 <div className="relative w-[170px] h-[170px] rounded-xl bg-[#155886] rotate-45">
                   <div className="absolute inset-0 flex items-center justify-center rotate-[-45deg]">
                     <p className="text-center w-2/3 text-3xl font-bold text-white">
-                      স্টুডেন্ট একাউন্ট
+                      {t("student_account")}
                     </p>
                   </div>
                 </div>
@@ -64,42 +67,42 @@ export default function AccountTypes({}: Props) {
                 <div className="relative w-[150px] h-[150px] rounded-xl bg-blue-400 rotate-45 shadow-inner">
                   <div className="absolute inset-0 flex items-center justify-center rotate-[-45deg]">
                     <p className="text-center w-2/3 text-2xl font-bold text-white">
-                      সেভিংস একাউন্ট
+                      {t("sevings_account")}
                     </p>
                   </div>
                 </div>
                 <div className="relative w-[150px] h-[150px] rounded-xl bg-gray-400 rotate-45 self-end">
                   <div className="absolute inset-0 flex items-center justify-center rotate-[-45deg]">
                     <p className="text-center w-2/3 text-2xl font-bold text-white">
-                      বিজনেস একাউন্ট
+                      {t("business_account")}
                     </p>
                   </div>
                 </div>
                 <div className="relative w-[150px] h-[150px] rounded-xl bg-gray-400 rotate-45">
                   <div className="absolute inset-0 flex items-center justify-center rotate-[-45deg]">
                     <p className="text-center w-2/3 text-2xl font-bold text-white">
-                      RDF
+                      {t("rfd")}
                     </p>
                   </div>
                 </div>
                 <div className="relative w-[150px] h-[150px] rounded-xl bg-[#155886] rotate-45 self-end">
                   <div className="absolute inset-0 flex items-center justify-center rotate-[-45deg]">
                     <p className="text-center w-2/3 text-2xl font-bold text-white">
-                      সুপার সেভিংস{" "}
+                      {t("supper_saving")}{" "}
                     </p>
                   </div>
                 </div>
                 <div className="relative w-[150px] h-[150px] rounded-xl bg-[#155886] rotate-45">
                   <div className="absolute inset-0 flex items-center justify-center rotate-[-45deg]">
                     <p className="text-center w-2/3 text-2xl font-bold text-white">
-                      ABS
+                      {t("abs")}
                     </p>
                   </div>
                 </div>
                 <div className="relative w-[150px] h-[150px] rounded-xl bg-[#155886] rotate-45 self-end">
                   <div className="absolute inset-0 flex items-center justify-center rotate-[-45deg]">
                     <p className="text-center w-2/3 text-2xl font-bold text-white">
-                      স্টুডেন্ট একাউন্ট
+                      {t("student_account")}
                     </p>
                   </div>
                 </div>
@@ -110,13 +113,13 @@ export default function AccountTypes({}: Props) {
           <div className="flex justify-center items-center py-4">
             <div>
               <div className="text-3xl text-[#155886] font-bold">
-                ডিপোজিট প্রোডাক্টস
+                {t("deposit_products")}
               </div>
               <Link
                 className="text-blue-400 block w-full text-right"
                 href={"/"}
               >
-                আরও জানুন...
+                {common("more")}...
               </Link>
             </div>
           </div>

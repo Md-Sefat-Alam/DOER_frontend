@@ -2,14 +2,16 @@ import React from "react";
 import Title from "../common/Title";
 import { ISpecialWorks } from "@/types/specialWorks";
 import Card from "../common/Card";
+import { useTranslations } from "next-intl";
 
 type Props = {};
 
 export default function SpecialWorks({}: Props) {
+  const tr = useTranslations("home_our_works");
   return (
-    <div id='special_works' className="bg-gray-100/65">
+    <div id="special_works" className="bg-gray-100/65">
       <div className="container mx-auto py-16 xl:px-0 px-4">
-        <Title title="বিশেষ কর্মসূচী" />
+        <Title title={tr("our_works_title")} />
         <div className="grid lg:grid-cols-3 py-4 sm:grid-cols-2 grid-cols-1 lg:gap-10 gap-4">
           {specialWorks.map((item) => (
             <Card item={item} />

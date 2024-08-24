@@ -1,6 +1,7 @@
 "use client";
 import { useGalleryEditContext } from "@/context/Gallery/GalleryEditContext";
 import { IGalleryData } from "@/types/gallery";
+import { useTranslations } from "next-intl";
 import React, {
   Dispatch,
   SetStateAction,
@@ -18,6 +19,7 @@ type Props = {
 };
 
 export default function AddNewGallery({ setGalleryData, imageData }: Props) {
+  const tr = useTranslations("dashboard");
   const [isAddNew, setIsAddNew] = useState(false);
   const galleryImageRef = useRef<HTMLInputElement | null>(null);
   const galleryAddNewImagePreviewRef = useRef<HTMLImageElement | null>(null);
@@ -193,7 +195,7 @@ export default function AddNewGallery({ setGalleryData, imageData }: Props) {
             resetForm(); // Reset the form when closing
           }}
         >
-          {isAddNew ? "Cancel" : "Add New"}
+          {isAddNew ? tr("cancel") : tr("add_new")}
         </button>
       </div>
       <div
@@ -207,7 +209,9 @@ export default function AddNewGallery({ setGalleryData, imageData }: Props) {
         >
           {isEdit ? (
             <div className="flex">
-              <p>Editing id: {_id}</p>
+              <p>
+                {tr("editing_id")}: {_id}
+              </p>
               {/* <div className="w-52">
                 <GalleryGetImage
                   item={{
@@ -229,7 +233,7 @@ export default function AddNewGallery({ setGalleryData, imageData }: Props) {
               className="text-gray-500 after:content-['*'] after:text-red-500"
               htmlFor="title"
             >
-              Title:
+              {tr("title")}:
             </label>
             <input
               required
@@ -244,7 +248,7 @@ export default function AddNewGallery({ setGalleryData, imageData }: Props) {
               className="text-gray-500 after:content-['*'] after:text-red-500"
               htmlFor="description"
             >
-              Small Description:
+              {tr("small_description")}:
             </label>
             <input
               required
@@ -300,7 +304,7 @@ export default function AddNewGallery({ setGalleryData, imageData }: Props) {
                   btnLoading ? "h-5 w-5 mr-3" : ""
                 } transition-all`}
               />
-              {isEdit ? "Update" : "Add"}
+              {isEdit ? tr("update") : tr("submit")}
             </button>
           </div>
         </form>

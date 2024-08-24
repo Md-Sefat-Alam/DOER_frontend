@@ -1,6 +1,7 @@
 "use client";
 import auth from "@/firebase/firebase.init";
 import { useRouter } from "@/navigation";
+import { useTranslations } from "next-intl";
 import React, { useEffect, useRef, useState } from "react";
 import {
   useAuthState,
@@ -15,6 +16,7 @@ export default function page({}: Props) {
   const [signInWithEmailAndPassword, signedUser, loading, error] =
     useSignInWithEmailAndPassword(auth);
   const [user] = useAuthState(auth);
+  const tr = useTranslations("login");
 
   const emailRef = useRef<HTMLInputElement | null>(null);
   const passRef = useRef<HTMLInputElement | null>(null);
@@ -59,8 +61,6 @@ export default function page({}: Props) {
     if (passRef.current) passRef.current.value = "";
   };
 
-  console.log({ user });
-
   return (
     <div className="bg-gradient-to-b min-h-screen from-gray-500 to-transparent">
       <div className="container mx-auto min-h-screen flex justify-center items-center">
@@ -78,7 +78,7 @@ export default function page({}: Props) {
                   className="text-gray-500 after:content-['*'] after:text-red-500"
                   htmlFor="title"
                 >
-                  Email:
+                  {tr("email")}:
                 </label>
                 <input
                   required
@@ -86,7 +86,7 @@ export default function page({}: Props) {
                   className="w-full py-2 px-2 focus:outline-red-200 rounded"
                   type="text"
                   name="Email"
-                  placeholder="Type: admin@admin.com"
+                  placeholder={tr("type") + ": admin@admin.com"}
                 />
               </div>
               <div className="flex flex-col items-start gap-2 py-2">
@@ -94,7 +94,7 @@ export default function page({}: Props) {
                   className="text-gray-500 after:content-['*'] after:text-red-500"
                   htmlFor="description"
                 >
-                  Password:
+                  {tr("password")}:
                 </label>
                 <input
                   required
@@ -102,7 +102,7 @@ export default function page({}: Props) {
                   className="w-full py-2 px-2 focus:outline-red-200 rounded"
                   type="password"
                   name="description"
-                  placeholder="Type: admin@"
+                  placeholder={tr("type") + ": admin@"}
                 />
               </div>
 
@@ -118,7 +118,7 @@ export default function page({}: Props) {
                       btnLoading ? "h-5 w-5 mr-3" : ""
                     } transition-all`}
                   />
-                  Login
+                  {tr('login')}
                 </button>
               </div>
             </form>

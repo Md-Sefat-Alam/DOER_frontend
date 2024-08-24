@@ -4,12 +4,14 @@ import DashboardGallery from "@/components/Dashboard/DashboardGallery/DashboardG
 import auth from "@/firebase/firebase.init";
 import withAuth from "@/firebase/withAuth";
 import { signOut } from "firebase/auth";
+import { useTranslations } from "next-intl";
 import React from "react";
 import { LuLogOut } from "react-icons/lu";
 
 type Props = {};
 
 function page({}: Props) {
+  const tr = useTranslations("dashboard");
   return (
     <div className=" min-h-screen bg-gradient-to-b from-gray-500 to-transparent pt-[120px]">
       <div className="container mx-auto xl:px-0 px-4">
@@ -21,11 +23,11 @@ function page({}: Props) {
                 signOut(auth);
               }}
             >
-              Logout <LuLogOut />
+              {tr("logout")} <LuLogOut />
             </button>
           </div>
         </div>
-        <Title title="অগ্রণী দুয়ার গ্যালারী পরিবর্তন করুন" />
+        <Title title={tr("doer_gallery_change")} />
         <DashboardGallery />
       </div>
     </div>

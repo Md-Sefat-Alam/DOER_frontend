@@ -1,30 +1,21 @@
 "use client";
+import { Link, useRouter } from "@/navigation";
 import { INavLink } from "@/types/hero";
 import Image from "next/image";
 import { useEffect, useState } from "react";
-import { BiWorld } from "react-icons/bi";
 import { CgClose } from "react-icons/cg";
+import { MdMenu } from "react-icons/md";
+import LocaleCn from "./LocaleCn";
 import NavLinks from "./NavLinks";
 import NavLinksMobile from "./NavLinksMobile";
-import { MdMenu } from "react-icons/md";
-import { Link, useRouter } from "@/navigation";
-import LocaleCn from "./LocaleCn";
+import { useTranslations } from "next-intl";
 
 type Props = {};
-
-const links: INavLink[] = [
-  { id: 1, title: "হোম", href: "#home" },
-  { id: 2, title: "সেবাসমূহ", href: "#services" },
-  { id: 3, title: "গ্যালারী", href: "#gallery" },
-  { id: 4, title: "বিশেষ কর্মসূচী", href: "#special_works" },
-  { id: 5, title: "যোগাযোগ", href: "#contact" },
-  { id: 5, title: "ড্যাশবোর্ড", href: "dashboard" },
-];
 
 export default function NavBar({}: Props) {
   const [isSticky, setIsSticky] = useState(false);
   const [isNavMobile, setIsNavMobile] = useState(false);
-  const router = useRouter();
+  const t = useTranslations("home_nav");
 
   useEffect(() => {
     const handleScroll = () => {
@@ -40,6 +31,15 @@ export default function NavBar({}: Props) {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
+  const links: INavLink[] = [
+    { id: 1, title: t("home"), href: "#home" },
+    { id: 2, title: t("services"), href: "#services" },
+    { id: 3, title: t("gallery"), href: "#gallery" },
+    { id: 4, title: t("special_works"), href: "#special_works" },
+    { id: 5, title: t("contact"), href: "#contact" },
+    { id: 5, title: t("dashboard"), href: "dashboard" },
+  ];
 
   return (
     <div

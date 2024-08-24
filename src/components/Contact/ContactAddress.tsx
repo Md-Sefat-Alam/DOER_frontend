@@ -1,28 +1,31 @@
 import { MailIcon } from "@/resources/Icons";
+import { convertNumber } from "@/utils/NumberConverter";
 import { HomeIcon, PhoneIcon } from "@heroicons/react/24/outline";
+import { useTranslations } from "next-intl";
 import { ReactElement } from "react";
 
 type Props = {};
 
 export default function ContactAddress({}: Props) {
+  const tr = useTranslations("home_contact");
+  const common = useTranslations("common");
   return (
     <div className="md:w-[40%] w-full">
       <div>
         <SingleItem
           icon={<MailIcon className="w-[30px] stroke-gray-500" />}
-          title="ইমেল:"
+          title={tr("email") + ":"}
           description="info@doer.com.bd"
         />
         <SingleItem
           icon={<PhoneIcon className="w-[30px] stroke-gray-500" />}
-          title="মোবাইল:"
-          description="০১৯৮৫৫৫৫০১৫, ০৯-৬০৬-৬০৬-৬০৬"
+          title={tr("mobile") + ":"}/* 01985555015, 09-606-606-606 */
+          description={convertNumber(common, "019-8555-5015, 09-606-606-606")}
         />
         <SingleItem
           icon={<HomeIcon className="w-[30px] stroke-gray-500" />}
-          title="ঠিকানা:"
-          description="জীবন বীমা টাওয়ার (লেভেল ১৩), ১০ দিলকুশা বানিজ্যিক এলাকা মতিঝিল,
-              ঢাকা-১০০০, বাংলাদেশ।"
+          title={tr("address") + ":"}
+          description={tr("address_detail")}
         />
       </div>
     </div>

@@ -1,5 +1,103 @@
 {
-  "homePage": {
-    "welcome": "Welcome to our site!"
+  "common": {
+    "more": "More Details",
+    "0": "0",
+    "1": "1",
+    "2": "2",
+    "3": "3",
+    "4": "4",
+    "5": "5",
+    "6": "6",
+    "7": "7",
+    "8": "8",
+    "9": "9"
+  },
+  "home_nav": {
+    "home": "Home",
+    "services": "Services",
+    "gallery": "Gallery",
+    "special_works": "Special Programs",
+    "contact": "Contact",
+    "dashboard": "Dashboard"
+  },
+  "home_hero": {
+    "_80days": "80 Days Program Award Ceremony",
+    "_80days_des": "In celebration of the 80 Days Special Program, Agrani DOER Banking announced rewards for 100% target achievement. The Baliyaghatta Bazaar Agent Banking Branch, Godagari, Rajshahi secured the first position based on performance.",
+    "_training": "Agrani DOER Banking Training Workshop",
+    "_training_des": "Agents attending the training session of Agrani DOER Banking",
+    "_money_widow": "Customer Withdrawal at Agrani DOER Banking Branch",
+    "_money_widow_des": "A customer is withdrawing money using fingerprint authentication at an Agrani DOER Banking branch."
+  },
+  "home_about_doer": {
+    "about_doer_title": "What is Agrani DOER Banking?",
+    "about_doer_des": "Agrani Bank Limited is a state-owned bank, a trusted and secure destination for banking services for all people. The name 'Agrani DOER Banking' represents the effort to bring this service to the customer's doorstep. 'Agrani DOER Banking' is committed to providing easy and secure banking services in every upazila of the country, especially in remote areas, through a robust and effective agent network. With a bit of awareness and caution, Agrani Bank is as safe as Agrani DOER Banking in terms of customer service.",
+    "apply_for_agent": "Apply for Agent Branch"
+  },
+  "home_our_services": {
+    "our_services": "Our Services",
+    "cash_deposit": "Cash Deposit",
+    "cash_withdraw": "Cash Withdrawal",
+    "online_transfer": "Online Transfer",
+    "remittance": "Remittance",
+    "utility_bill": "Utility Bill Payment",
+    "balance_check": "Account Balance Check"
+  },
+  "home_account_type": {
+    "sevings_account": "Savings Account",
+    "business_account": "Business Account",
+    "rfd": "RDF",
+    "supper_saving": "Super Savings",
+    "abs": "ABS",
+    "student_account": "Student Account",
+    "deposit_products": "Deposit Products"
+  },
+  "home_gallery": {
+    "gallery_title": "Agrani DOER Gallery"
+  },
+  "home_our_works": {
+    "our_works_title": "Special Programs"
+  },
+  "home_contact": {
+    "contact_address": "Contact Address",
+    "email": "Email",
+    "mobile": "Mobile",
+    "address": "Address",
+    "address_detail": "Jiban Bima Tower (Level 13), 10 Dilkusha Commercial Area, Motijheel, Dhaka-1000, Bangladesh.",
+    "your_name": "Your Name",
+    "your_email": "Your Email",
+    "subjects": "Subject",
+    "your_text": "Your Message",
+    "send": "Send Message"
+  },
+  "footer": {
+    "title": "Agrani DOER",
+    "slog": "The Doorway to Possibilities",
+    "about_agroni_doer": "About Agrani DOER",
+    "about_us": "About Us",
+    "job_apply": "Job Application",
+    "important_links": "Important Links",
+    "sms_transactions": "Apply for SMS Transactions",
+    "bdex_tada": "BDEx - TADA - Submission",
+    "doer_lms_training": "DOER LMS (Training)",
+    "faq": "FAQ",
+    "contact_us": "Contact Us",
+    "about_agroni_doer_info": "Learn More About Agrani DOER"
+  },
+  "login": {
+    "email": "Email",
+    "password": "Password",
+    "type": "Type",
+    "login": "Login"
+  },
+  "dashboard": {
+    "logout": "Log Out",
+    "doer_gallery_change": "Change Agrani DOER Gallery",
+    "add_new": "Add New",
+    "cancel": "Cancel",
+    "editing_id": "Editing ID",
+    "title": "Title",
+    "small_description": "Small Description",
+    "submit": "Submit",
+    "update": "Update"
   }
 }
