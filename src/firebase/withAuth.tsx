@@ -1,10 +1,10 @@
 "use client";
 
 import { useEffect } from "react";
-import { useRouter } from "next/navigation";
 import { useAuthState } from "react-firebase-hooks/auth";
 import auth from "./firebase.init";
 import { CgSpinner } from "react-icons/cg";
+import { useRouter } from "@/navigation";
 
 export default function withAuth(Component: any) {
   return function WithAuthComponent(props: any) {
