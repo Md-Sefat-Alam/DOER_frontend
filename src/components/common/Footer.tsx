@@ -84,7 +84,7 @@ export default function Footer({}: Props) {
       {/* end footer top section */}
       <div className="container mx-auto text-center text-white py-2">
         <small>
-          2019 ©{" "}
+          2024 ©{" "}
           <Link
             className="text-blue-400 "
             target="_blank"
