@@ -1,5 +1,5 @@
 import { MailIcon } from "@/resources/Icons";
-import { convertNumber } from "@/utils/NumberConverter";
+import { convertNumber } from "@/utils/numberConverter";
 import { HomeIcon, PhoneIcon } from "@heroicons/react/24/outline";
 import { useTranslations } from "next-intl";
 import { ReactElement } from "react";
