@@ -7,7 +7,8 @@ import { CgClose } from "react-icons/cg";
 import NavLinks from "./NavLinks";
 import NavLinksMobile from "./NavLinksMobile";
 import { MdMenu } from "react-icons/md";
-import { Link } from "@/navigation";
+import { Link, useRouter } from "@/navigation";
+import LocaleCn from "./LocaleCn";
 
 type Props = {};
 
@@ -23,6 +24,7 @@ const links: INavLink[] = [
 export default function NavBar({}: Props) {
   const [isSticky, setIsSticky] = useState(false);
   const [isNavMobile, setIsNavMobile] = useState(false);
+  const router = useRouter();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -67,14 +69,7 @@ export default function NavBar({}: Props) {
             </ul>
           </div>
           <div className="flex justify-center items-center">
-            <button
-              className={`${
-                isSticky ? "text-gray-900" : "text-white"
-              } font-bold flex gap-1`}
-            >
-              <BiWorld className="text-2xl text-blue-400" />
-              English
-            </button>
+            <LocaleCn isSticky={isSticky} />
           </div>
         </div>
       </div>
@@ -119,11 +114,7 @@ export default function NavBar({}: Props) {
               </ul>
             </div>
             <div className="flex justify-end items-center mt-4 mr-4">
-              <button
-                className={`text-white font-bold bg-gray-500/50 p-4 rounded flex gap-2`}
-              >
-                <BiWorld className="text-2xl text-blue-400" /> English
-              </button>
+              <LocaleCn isSticky={isSticky} />
             </div>
           </div>
           {isNavMobile ? (
