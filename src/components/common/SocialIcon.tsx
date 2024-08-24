@@ -1,5 +1,5 @@
 import { FaceFrownIcon } from "@heroicons/react/16/solid";
-import Link from "next/link";
+import { Link } from "@/navigation";
 import React from "react";
 import {
   FaFacebook,

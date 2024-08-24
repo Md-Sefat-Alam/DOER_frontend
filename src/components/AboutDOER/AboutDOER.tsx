@@ -1,6 +1,6 @@
 import React from "react";
 import Title from "../common/Title";
-import Link from "next/link";
+import { Link } from "@/navigation";
 
 type Props = {};
 

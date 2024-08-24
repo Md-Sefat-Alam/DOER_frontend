@@ -1,6 +1,6 @@
 import auth from "@/firebase/firebase.init";
 import { INavLink } from "@/types/hero";
-import Link from "next/link";
+import { Link } from "@/navigation";
 import React, { Dispatch, SetStateAction } from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
 

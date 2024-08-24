@@ -1,25 +1,6 @@
-import AboutDOER from "@/components/AboutDOER/AboutDOER";
-import AccountTypes from "@/components/AccountTypes/AccountTypes";
-import Contact from "@/components/Contact/Contact";
-import Gallery from "@/components/Gallery/Gallery";
-import OurServices from "@/components/OurServices/OurServices";
-import SpecialWorks from "@/components/SpecialWorks/SpecialWorks";
-import dynamic from "next/dynamic";
+import { redirect } from "next/navigation";
 
-const Hero = dynamic(() => import("@/components/Hero/Hero"), { ssr: false });
-
-export default function Home() {
-  return (
-    <main className="">
-      <div id="home" className="min-h-screen">
-        <Hero />
-      </div>
-      <AboutDOER />
-      <OurServices />
-      <AccountTypes />
-      <Gallery />
-      <SpecialWorks />
-      <Contact />
-    </main>
-  );
+// This page only renders when the app is built statically (output: 'export')
+export default function RootPage() {
+  redirect("/bn");
 }

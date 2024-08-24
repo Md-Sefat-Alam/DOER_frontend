@@ -1,6 +1,6 @@
 "use client";
 import auth from "@/firebase/firebase.init";
-import { useRouter } from "next/navigation";
+import { useRouter } from "@/navigation";
 import React, { useEffect, useRef, useState } from "react";
 import {
   useAuthState,

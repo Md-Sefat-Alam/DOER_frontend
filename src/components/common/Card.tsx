@@ -1,5 +1,5 @@
+import { Link } from "@/navigation";
 import { ISpecialWorks } from "@/types/specialWorks";
-import Link from "next/link";
 
 type Props = { item: ISpecialWorks };
 

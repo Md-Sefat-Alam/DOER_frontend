@@ -1,6 +1,6 @@
 import auth from "@/firebase/firebase.init";
 import { INavLink } from "@/types/hero";
-import Link from "next/link";
+import { Link } from "@/navigation";
 import React from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
 
@@ -16,7 +16,7 @@ export default function NavLinks({ item, isSticky }: Props) {
           isSticky ? "text-gray-900" : "text-white"
         } hover:-translate-y-1 transition-all hover:text-red-400`}
       >
-        {item.href === "dashboard" && user? (
+        {item.href === "dashboard" && user ? (
           <div className="absolute -top-2 -right-3">
             <span className="relative flex h-3 w-3">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-sky-400 opacity-75"></span>

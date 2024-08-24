@@ -7,7 +7,7 @@ import { CgClose } from "react-icons/cg";
 import NavLinks from "./NavLinks";
 import NavLinksMobile from "./NavLinksMobile";
 import { MdMenu } from "react-icons/md";
-import Link from "next/link";
+import { Link } from "@/navigation";
 
 type Props = {};
 

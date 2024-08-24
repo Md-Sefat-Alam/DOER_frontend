@@ -1,7 +1,7 @@
 import React from "react";
 import SocialIcon from "./SocialIcon";
 import Title from "./Title";
-import Link from "next/link";
+import { Link } from "@/navigation";
 
 type Props = {};
 
